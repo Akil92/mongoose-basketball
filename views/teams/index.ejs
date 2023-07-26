@@ -9,7 +9,7 @@
   <tbody>
     <% teams.forEach(function(t) { %>
     <tr>
-      <td><a href="/teams/<%= t._id %>"><%= t.teamName %></a></td>
+      <td class="teamName"><a href="/teams/<%= t._id %>"><%= t.teamName %></a></td>
     </tr>
     <% }) %>
   </tbody>

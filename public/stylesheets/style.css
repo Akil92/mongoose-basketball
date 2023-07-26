@@ -20,14 +20,48 @@ a {
 }
 
 .basketball {
+  text-align: center;
   text-decoration: wavy;
   color:orange;
   margin: 40px;
-  margin-left: 200px;
   height: 80px;
   font-size: 50px;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
 }
 
 .tInfo {
   color: red;
+}
+
+.tNameInfo {
+  color: red;
+}
+
+.pNameInfo {
+
+}
+
+.pAgeInfo {
+
+}
+
+.pPositionInfo {
+
+}
+
+.teamName {
+
+}
+
+.info {
+  padding: 20px;
+  color: blueviolet;
+}
+
+#a {
+  line-height: 500%;
+} 
+
+#b {
+  line-height: 500%;
 }

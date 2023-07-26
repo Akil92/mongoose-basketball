@@ -1,5 +1,30 @@
 <%- include("../partials/header") %>
-
+<br></br>
+<form id="addCourt" action="courts/addTeam" method="POST">
+    <label>Pick a Court Number</label>
+<select name="courtNo" type="number">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+</select>
+<br></br>
+<label>Select a playing Time</label>
+  <select name="playingTime" type="number">
+    <option value="10:00-12:30">10:00-12:30</option>
+    <option value="1:00-3:30">1:00-3:30</option>
+    <option value="3:00-5:30">3:00-5:30</option>
+    <option value="6:00-8:30">6:00-8:30</option>
+  </select>
+  <br></br>
+  <label>Select Your Team</label>
+  <select name="teamsId">
+      <%- team.map(t => 
+        `<option value="${t._id}">${t.teamName}</option>`
+      ).join('') %>
+  </select>
+  <button type="submit"> Join this court </button>
+</form>
 
 
 <%- include("../partials/footer") %>

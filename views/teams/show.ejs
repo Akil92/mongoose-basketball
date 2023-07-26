@@ -1,21 +1,21 @@
 <%- include("../partials/header") %>
-<h2 id="teamInfo">TEAM INFO</h2>
+<h2 class="teamInfo">TEAM INFO</h2>
+<h2 class="tNameInfo"> <%= team.teamName %> </h2>
 <table>
   <thead>
     <tr>
-      <th>Team Name</th>
-      <th>player Name</th>
-      <th>Age</th>
-      <th>Position</th>
+      <th class="pNameInfo">player Name</th>
+      <th class="pAgeInfo">Age</th>
+      <th class="pPositionInfo">Position</th>
   </tr>
   </thead>
   <tbody>
     <% team.playerName.forEach(function(ele, i) { %>
     <tr class="tInfo">
-        <td> <%= team.teamName %> </td>
+        
          <td><%= ele %> </td>
          <td> <%= team.age[i] %> <td>
-         <td> <%= team.position[i] %>, </td>
+         <td> <%= team.position[i] %> </td>
     </tr>
     <% }) %>
   </tbody>

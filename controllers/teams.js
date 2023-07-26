@@ -1,5 +1,6 @@
 const Team = require("../models/team");
 
+
 async function newTeam(req, res) {
   res.render("teams/new", { title: "Add New Team"});
 }
