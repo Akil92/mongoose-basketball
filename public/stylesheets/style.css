@@ -29,6 +29,12 @@ a {
   text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
 }
 
+.teamInfo {
+  color: blueviolet;
+  font-size: 50px;
+  text-decoration: underline;
+}
+
 .tInfo {
   color: red;
 }
@@ -50,12 +56,52 @@ a {
 }
 
 .teamName {
+  text-align: center;
+  font-size: large;
 
 }
 
-.info {
-  padding: 20px;
+#teamName {
+  padding-top: 30px;
   color: blueviolet;
+  font-size: x-large;
+  text-align: center;
+  text-decoration: underline;
+}
+
+#allTeams {
+  text-align: center;
+  color: orange;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+  font-size: 50px;
+  border: 5px solid red;
+}
+
+#createTeam {
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+  color: orange;
+  text-align: center;
+  border: 5px solid red;
+  font-size: 50px;
+}
+
+#reserve {
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+  color: orange;
+  border: 5px solid red;
+  text-align: center;
+  font-size: 50px;
+}
+
+.Courts {
+  font-size: 30px;
+  color: blueviolet;
+  text-decoration: underline;
+}
+
+.info {
+  color: blueviolet;
+  font-size: 25px;
 }
 
 #a {
@@ -64,4 +110,21 @@ a {
 
 #b {
   line-height: 500%;
+}
+
+#selectPTime {
+font-size: larger;
+font-weight: 600;
+}
+
+#selectYTeam {
+  font-size: larger;
+  font-weight: 600;
+
+}
+
+
+#pickCourtNo {
+font-size: larger;
+font-weight: 600;
 }

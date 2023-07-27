@@ -20,8 +20,12 @@ router.get("/oauth2callback", passport.authenticate(
   {
     successRedirect: "/",
     failureRedirect: "/",
-    logoutRedirect: "/"
   }
 ));
 
+router.get("/logout", function(req, res) {
+  req.logout(function() {
+    res.redirect("/");
+  })
+})
 module.exports = router;

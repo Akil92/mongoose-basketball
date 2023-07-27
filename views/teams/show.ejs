@@ -11,13 +11,20 @@
   </thead>
   <tbody>
     <% team.playerName.forEach(function(ele, i) { %>
-    <tr class="tInfo">
-        
-         <td><%= ele %> </td>
-         <td> <%= team.age[i] %> <td>
-         <td> <%= team.position[i] %> </td>
-    </tr>
+      <tr class="tInfo">
+        <td><%= ele %> </td>
+        <td> <%= team.age[i] %> <td>
+        <td> <%= team.position[i] %> </td>
     <% }) %>
+      </tr>
+    <td>
+      <% if (user?._id.equals(team.user)) { %>
+        <form action="/teams/<%= team._id %>?_method=DELETE" method="POST">
+          <button type="submit">X</button>
+        </form> 
+      <% } %>
+   
+    </td>
   </tbody>
 </table>
 

@@ -22,11 +22,18 @@ async function show(req, res) {
     res.render("teams/show", {title: "Team Info", team});
 }
 
+async function deleteTeam(req, res) {
+  await Team/Team.findOneAndDelete(
+    {id: req.params.id, userRecommending: req.user._id}
+  );
+  res.redirect("/teams");
+}
 
 
 module.exports = {
     create,
     newTeam,
     index,
-    show
+    show,
+    deleteTeam
 }
