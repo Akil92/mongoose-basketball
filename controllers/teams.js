@@ -44,14 +44,16 @@ async function edit(req, res) {
 
 async function update(req, res) {
   try {
-  await Team.findOneAndUpdate( {
-    _id:req.params.id
-  },
+    const updatedTeam = await Team.findOneAndUpdate( 
+    {_id: req.params.id,},
     req.body,
     {new: true},
-  )
-  res.redirect(`/teams/${Team.playerName._id}`)
-} catch(err) {
+  );
+  if (!updatedTeam) {
+    return res.status(404).send("Team not found.");
+  }
+  res.redirect(`/teams/${req.params.id}`);
+  } catch(err) {
   console.log(err);
 }
 };

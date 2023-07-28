@@ -13,15 +13,16 @@
     <% team.playerName.forEach(function(ele, i) { %>
       <tr class="tInfo">
         <td><%= ele %> </td>
-        <td> <%= team.age[i] %> <td>
+        <td> <%= team.age[i] %> </td>
         <td> <%= team.position[i] %> </td>
-    
-        </tr>
-    <form action="/teams/<%= team._id %>?_method=PUT" method="POST">
-      <input name="playerName" value="<%= ele %>">
+    <% }) %>
+      </tr>
+    <form action="/teams/<%= team._id %>?_method=PUT" method="POST"> 
+      <input name="teamName" value="<%= team.teamName %>">
+      </select>
       <button type="submit">Update Team</button>
     </form>
-    <% }) %>
+    
   </tbody>
 </table>
 

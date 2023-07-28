@@ -10,6 +10,9 @@
     <option value="4">4</option>
   </select>
   <br></br>
+  <label class="date">Date</label>
+  <input type= "datetime"name="date">
+  <br></br>
   <label id="selectPTime">Select a playing Time</label>
   <select name="playingTime" type="string">
     <option value="10:00-12:30">10:00-12:30</option>
@@ -26,22 +29,24 @@
   </select>
   <button type="submit"> Join this court </button>
 </form>
-<h2 class="Courts"> Courts </h2>
+<h2 class="Courts"> Court List </h2>
 <table>
   <thead>
     <tr>
       <th class="cNo">Court No.</th>
       <th class="playTime">Reservation Time:</th>
+      <th class="dateList">Date</th>
       <th class="cTeamName">Team</th>
   </tr>
   </thead>
-  <tbody>
-    <tr class="cInfo">
-      <% courts.forEach(function(c) { %>
-        <td> <%= c.courtNo %> </td>
-        <td> <%= c.playTime %> </td>
-        <% c.teams.forEach(function(ct) { %>
-         <td> <a href="/teams/<%= ct._id %>"><%= ct.teamName %></a></td>
+  <tbody class="courtList">
+    <% courts.forEach(function(c) { %>
+        <tr class="cInfo">
+          <td class="courtNo"> <%= c.courtNo %> </td> 
+          <td class="courtPlayingTime"> <%= c.playingTime %> </td>
+        <td class="courtDate"><%= c.date %> </td>
+       <% c.teams.forEach(function(ct) { %>
+         <td class="courtTeam"> <a href="/teams/<%= ct._id %>"><%= ct.teamName %></a></td>
         <% }) %>
       <% }) %>
     </tr>
