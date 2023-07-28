@@ -128,3 +128,11 @@ font-weight: 600;
 font-size: larger;
 font-weight: 600;
 }
+
+.courtIndex {
+  background-color: yellow;
+}
+
+.teamIndex {
+  background-color: red;
+}

@@ -14,4 +14,8 @@ router.post("/", ensureLoggedIn, teamsCtrl.create);
 
 router.delete("/:id", teamsCtrl.deleteTeam);
 
+router.get("/:id/edit",ensureLoggedIn, teamsCtrl.edit);
+
+router.put("/:id", ensureLoggedIn, teamsCtrl.update);
+
 module.exports = router;

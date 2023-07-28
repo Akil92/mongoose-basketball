@@ -5,7 +5,7 @@ async function index(req, res) {
   let teams = await Team.find({});
   let courts = await Court.find({}).populate("teams");
   console.log(courts);
-  res.render("courts/index", {title: "All courts", courts, teams});
+  res.render("courts/index", {title: "All courts", courts, teams, homePage: "courtIndex"});
 }
 
 async function addTeam(req, res) {
@@ -20,7 +20,7 @@ async function addTeam(req, res) {
     if (court !== null) {
       court.teams.push(team);
       await court.save();
-      res.render("/courts");  
+      res.render("/courts", {homePage: "addTeam"});  
     } else {
       console.log("Court not found");
     }

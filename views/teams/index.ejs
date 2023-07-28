@@ -11,7 +11,16 @@
     <tr>
       <td class="teamName"><a href="/teams/<%= t._id %>"><%= t.teamName %></a></td>
     </tr>
-    <% }) %>
+    <tr>
+      <td>
+      <% if (user?._id.equals(t.user)) { %>
+      <form action="/teams/<%= t._id %>?_method=DELETE" method="POST" class="delete">
+        <button type="submit">X</button>
+      </form> 
+       <% } %> 
+    </td>
+    </tr>
+   <% }) %>
   </tbody>
 </table>
 

@@ -15,16 +15,13 @@
         <td><%= ele %> </td>
         <td> <%= team.age[i] %> <td>
         <td> <%= team.position[i] %> </td>
+    
+        </tr>
+    <form action="/teams/<%= team._id %>?_method=PUT" method="POST">
+      <input name="playerName" value="<%= ele %>">
+      <button type="submit">Update Team</button>
+    </form>
     <% }) %>
-      </tr>
-    <td>
-      <% if (user?._id.equals(team.user)) { %>
-        <form action="/teams/<%= team._id %>?_method=DELETE" method="POST">
-          <button type="submit">X</button>
-        </form> 
-      <% } %>
-   
-    </td>
   </tbody>
 </table>
 
