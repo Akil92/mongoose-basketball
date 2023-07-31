@@ -10,6 +10,8 @@ Basketball Zone is a an app that allows you to sign up a basketball team and res
 JavaScript
 CSS
 HTML
+MongoDB
+Express
 
 # Getting Started
 
