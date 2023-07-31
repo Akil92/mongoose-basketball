@@ -42,6 +42,7 @@ async function show(req, res) {
 }
 
 async function create(req, res) {
+  req.body.date += "T00:00";
   console.log("create");
   console.log(req.body);
   try {

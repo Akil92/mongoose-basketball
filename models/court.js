@@ -14,12 +14,11 @@ const courtSchema = new Schema({
     ref: "Team",
     type: Schema.Types.ObjectId,}],
   date: {
-        type: Date,
-        default: function() {
-          return new Date(+ new Date());
-          },
-        },
-   
+    type: Date,
+    default: function() {
+    return new Date(+ new Date());
+    },
+  },
 })
 
 
