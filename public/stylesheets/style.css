@@ -97,6 +97,7 @@ a {
   border: 5px solid red;
   text-align: center;
   font-size: 50px;
+  margin: 0;
 }
 
 .Courts {
@@ -106,7 +107,7 @@ a {
 }
 
 .info {
-  color: blueviolet;
+  color: orange;
   font-size: 25px;
 }
 
@@ -145,6 +146,7 @@ font-weight: 600;
 
 .courtIndex {
   background-color: yellow;
+  height: 100%;
 }
 
 .teamIndex {
@@ -219,5 +221,10 @@ font-weight: 600;
 
 nav {
   background-color: blue;
+  height: 30px;
+}
 
+.footer {
+  color: yellow;
+  background-color: blue;
 }
