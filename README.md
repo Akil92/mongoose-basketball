@@ -15,6 +15,7 @@ Express
 
 # Getting Started
 https://akils-basketball-1ac326900543.herokuapp.com/
+https://trello.com/b/0ExSCkcF/project-2
 
 # Next Steps
 For future steps, I would like to add an update feature that allows the user to edit player names, age and positions if they need to replace a player. I would also like to only allow the user to be able to reserve their team on a court and not anybody elses.
